@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Simulador from "../simulador/simulador";
+import InputMask from "react-input-mask";
 
 function Formulario() {
   const [simuladorAtivo, setSimuladorAtivo] = useState(false);
@@ -20,14 +21,34 @@ function Formulario() {
     setPagas(parseFloat(e.target.value));
   };
 
+
+  const formatCurrency = (value) => {
+    // Remove todos os caracteres que não sejam dígitos ou ponto
+    const numericValue = value.replace(/[^0-9.]/g, "");
+
+    // Verifica se o valor está no formato "x.xxx,xx"
+    const hasDecimal = numericValue.indexOf(",") !== -1;
+
+    // Formata o valor com separador de milhar e vírgula decimal
+    const formattedValue = new Intl.NumberFormat("pt-BR", {
+      minimumFractionDigits: hasDecimal ? 2 : 0,
+      maximumFractionDigits: 2,
+    }).format(parseFloat(numericValue));
+
+    return formattedValue;
+  };
+
   const handleParcChange = (e) => {
-    setParc(e.target.value);
+    setParc(e.target.value)
   };
 
   const handleEmpresChange = (e) => {
-    setEmpres(e.target.value);
+    setEmpres(e.target.value)
   };
-
+  
+  
+  
+  
   return (
     <>
       <div className="container mt-5">
@@ -36,7 +57,7 @@ function Formulario() {
         <div className="row align-items-center">
           <div className="col-sm-2 text-start">
             <img
-              src="./src/assets/LOGO_VIEIRA AZUL-SEM FUNDO.png"
+              src="./src/assets/img/LOGO_VIEIRA AZUL-SEM FUNDO.png"
               alt="Logo Vieiratech"
             />
           </div>
@@ -84,7 +105,7 @@ function Formulario() {
               name="vl-parcela"
               placeholder="Ex.: 380,00"
               className="form-control bg-dark text-white"
-              value={vlparc}
+              value={vlparc.replace(",",".")} // Substituir vírgula por ponto
               onChange={handleParcChange}
             />
           </div>
@@ -97,7 +118,7 @@ function Formulario() {
               name="vl-emprestimo"
               placeholder="Ex.: 15.000,00"
               className="form-control bg-dark text-white"
-              value={vlempres}
+              value={vlempres.replace(",",".")}
               onChange={handleEmpresChange}
             />
           </div>
