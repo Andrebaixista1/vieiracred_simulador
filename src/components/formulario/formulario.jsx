@@ -56,10 +56,10 @@ function Formulario() {
       <div className="col-10">
         <div className="row align-items-center">
           <div className="col-sm-2 text-start">
-            <img
-              src="https://uploaddeimagens.com.br/images/004/519/847/original/LOGO_VIEIRA_AZUL-SEM_FUNDO.png"
+            {/* <img
+              src="https://uploaddeimagens.com.br/images/004/519/847/original/LOGO_VIEIRA_AZUL-SEM_FUNDO.png?1687776645"
               alt="Logo Vieiratech"
-            />
+            /> */}
           </div>
           <div className="col-sm-9 text-center">
             <h1>Simulador de Proposta - INBURSA</h1>

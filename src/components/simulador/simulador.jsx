@@ -58,7 +58,7 @@ function Simulador(props) {
 
   const vp = calcularValorPresente(taxa, prazo - pagas, vlparc);
   const taxa2 = 1.72; // Taxa de juros em formato decimal
-  const taxa3 = 1.68; // Taxa de juros em formato decimal
+  const taxa3 = 1.54; // Taxa de juros em formato decimal
   const taxa4 = 1.58; // Taxa de juros em formato decimal
   const parcelasRestantes = prazo - pagas; // Número de parcelas restantes
   const saldoDevedor = vp; // Saldo devedor
@@ -163,7 +163,7 @@ function Simulador(props) {
             </table>
           </div>
         </div>
-        {/* Tabela 1,68 */}
+        {/* Tabela 1,54 */}
         <div className="row">
           <div className="col-6">
             <table className="table table-dark table-striped">
@@ -171,7 +171,7 @@ function Simulador(props) {
                 <tr>
                   {/* <th scope="col">Título</th> */}
                   <th scope="col" colSpan="2" className="text-center">
-                    Simulado na 1,68%
+                    Simulado na 1,54%
                   </th>
                 </tr>
               </thead>
@@ -180,7 +180,7 @@ function Simulador(props) {
                 
                 <tr>
                   <th>Nova Taxa de Juros</th>
-                  <th>1,68%</th>
+                  <th>1,54%</th>
                 </tr>
                 <tr>
                   <th>Novo Valor de Parcela (Aproximado)</th>
@@ -228,10 +228,10 @@ function Simulador(props) {
         {/* Tabela 1,58 */}
         <div className="row">
           <div className="col-6">
-            <table className="table table-dark table-striped">
+            {/* <table className="table table-dark table-striped">
               <thead>
                 <tr>
-                  {/* <th scope="col">Título</th> */}
+                  <th scope="col">Título</th>
                   <th scope="col" colSpan="2" className="text-center">
                     Simulado na 1,58%
                   </th>
@@ -260,7 +260,7 @@ function Simulador(props) {
             <table className="table table-secondary table-striped">
               <thead>
                 <tr>
-                  {/* <th scope="col">Economia</th> */}
+                  <th scope="col">Economia</th> 
                   <th scope="col" colSpan="2" className="text-center">Simulação de Economia</th>
                 </tr>
               </thead>
@@ -284,7 +284,7 @@ function Simulador(props) {
                   </th>
                 </tr>
               </tbody>
-            </table>
+            </table> */}
           </div>
         </div>
       </div>
