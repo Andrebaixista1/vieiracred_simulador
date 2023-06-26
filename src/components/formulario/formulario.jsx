@@ -57,7 +57,7 @@ function Formulario() {
         <div className="row align-items-center">
           <div className="col-sm-2 text-start">
             <img
-              src="./src/assets/img/logovieira_branco.png"
+              src="https://uploaddeimagens.com.br/images/004/519/847/original/LOGO_VIEIRA_AZUL-SEM_FUNDO.png"
               alt="Logo Vieiratech"
             />
           </div>
