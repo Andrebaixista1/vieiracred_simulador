@@ -155,6 +155,8 @@ function Formulario() {
           />
         )}
       </div>
+      <br /><br />
+      <footer className="text-center"><b>SysAnd</b> &#169; André Felipe 2023</footer>
     </>
   );
 }
