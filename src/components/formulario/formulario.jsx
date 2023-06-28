@@ -21,7 +21,6 @@ function Formulario() {
     setPagas(parseFloat(e.target.value));
   };
 
-
   const formatCurrency = (value) => {
     // Remove todos os caracteres que não sejam dígitos ou ponto
     const numericValue = value.replace(/[^0-9.]/g, "");
@@ -39,40 +38,33 @@ function Formulario() {
   };
 
   const handleParcChange = (e) => {
-    setParc(e.target.value)
+    setParc(e.target.value);
   };
 
   const handleEmpresChange = (e) => {
-    setEmpres(e.target.value)
+    setEmpres(e.target.value);
   };
-  
-  
-  
-  
+
   return (
     <>
       <div className="container mt-5">
-      <div className="row justify-content-center">
-      <div className="col-10">
-        <div className="row align-items-center">
-          <div className="col-sm-2 text-start">
-            <img
-              src="https://uploaddeimagens.com.br/images/004/519/847/original/LOGO_VIEIRA_AZUL-SEM_FUNDO.png?1687776645"
-              alt="Logo Vieiratech"
-              style={{margin: 0,
-                padding: 0,
-                width: 130,
-                height: 30}}
-            />
-            
-          </div>
-          <div className="col-sm-9 text-center">
-            <h1>Simulador de Proposta - INBURSA</h1>
+        <div className="row justify-content-center">
+          <div className="col-10">
+            <div className="row align-items-center">
+              <div className="col-sm-2 text-start">
+                <img
+                  src="https://uploaddeimagens.com.br/images/004/519/847/original/LOGO_VIEIRA_AZUL-SEM_FUNDO.png?1687776645"
+                  alt="Logo Vieiratech"
+                  style={{ margin: 0, padding: 0, width: 130, height: 30 }}
+                />
+              </div>
+              <div className="col-sm-9 text-center">
+                <h1>Simulador de Proposta - INBURSA</h1>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  <br />
+        <br />
 
         <form className="row align-items-end justify-content-center gy-2">
           <div className="col-sm-6">
@@ -110,7 +102,7 @@ function Formulario() {
               name="vl-parcela"
               placeholder="Ex.: 380,00"
               className="form-control bg-dark text-white"
-              value={vlparc.replace(",",".")} // Substituir vírgula por ponto
+              value={vlparc.replace(",", ".")} // Substituir vírgula por ponto
               onChange={handleParcChange}
             />
           </div>
@@ -123,7 +115,7 @@ function Formulario() {
               name="vl-emprestimo"
               placeholder="Ex.: 15.000,00"
               className="form-control bg-dark text-white"
-              value={vlempres.replace(",",".")}
+              value={vlempres.replace(",", ".")}
               onChange={handleEmpresChange}
             />
           </div>
@@ -160,8 +152,20 @@ function Formulario() {
           />
         )}
       </div>
-      <br /><br />
-      <footer className="text-center"><b>Vieiratech2023</b> &#169; André Felipe | SysAnd v1.0.2506</footer>
+      <br />
+      <br />
+      <footer className="text-center">
+        <b>Vieiratech2023</b> &#169; André Felipe | SysAnd v1.0.2506
+      </footer><br />
+      <footer className="text-center">
+        Powered by{" "}
+        <img
+          src="https://uploaddeimagens.com.br/images/004/523/705/full/chatgpt-icon.png"
+          style={{ margin: "0", padding: "0", width: "4vh", height: "4vh" }}
+          alt="ChatGPT"
+        />
+      </footer>
+
       <br />
     </>
   );
