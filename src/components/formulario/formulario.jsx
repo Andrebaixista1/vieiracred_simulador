@@ -122,25 +122,36 @@ function Formulario() {
         </form>
 
         <div className="row justify-content-center mt-4">
-          <div className="col-sm-6 text-center">
-            <input
-              type="submit"
-              name="submit"
-              className="btn btn-success"
-              value="Simular"
-              onClick={handleSimular}
-            />
-          </div>
-          <div className="col-sm-6 text-center">
-            <input
-              type="submit"
-              name="reset"
-              className="btn btn-danger"
-              value="Reset"
-              onClick={() => window.location.reload()}
-            />
-          </div>
-        </div>
+  <div className="col-sm-6 text-center">
+    <div className="d-flex align-items-center" style={{ gap: '10px' }}>
+      <input
+        type="submit"
+        name="submit"
+        className="btn btn-success"
+        value="Simular Inbursa"
+        onClick={handleSimular}
+      />
+      <input
+        type="submit"
+        name="submit"
+        className="btn btn-success disabled"
+        value="Simular Daycoval"
+        onClick={handleSimular}
+      />
+    </div>
+  </div>
+  <div className="col-sm-3 text-center" >
+    <input
+      type="submit"
+      name="reset"
+      className="btn btn-danger"
+      value="Reset"
+      onClick={() => window.location.reload()}
+    />
+  </div>
+</div>
+
+
 
         {simuladorAtivo && (
           <Simulador
@@ -156,7 +167,8 @@ function Formulario() {
       <br />
       <footer className="text-center">
         <b>Vieiratech2023</b> &#169; André Felipe | SysAnd v1.0.2506
-      </footer><br />
+      </footer>
+      <br />
       <footer className="text-center">
         Powered by{" "}
         <img
