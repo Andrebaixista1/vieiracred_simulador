@@ -83,7 +83,7 @@ function Simulador(props) {
 
       <div className="container">
         <div className="row text-center">
-          <h1>Simulação</h1>
+          <h1>Simulação - INBURSA</h1>
         </div>
         <br />
         <div className="row">
@@ -137,7 +137,7 @@ function Simulador(props) {
               <thead>
                 <tr>
                   {/* <th scope="col">Economia</th> */}
-                  <th scope="col" colSpan="2" className="text-center">Simulação de Economia</th>
+                  <th scope="col" colSpan="2" className="text-center">Simulação de Economia - 1,72%</th>
                 </tr>
               </thead>
               <tbody>
@@ -199,7 +199,7 @@ function Simulador(props) {
               <thead>
                 <tr>
                   {/* <th scope="col">Economia</th> */}
-                  <th scope="col" colSpan="2" className="text-center">Simulação de Economia</th>
+                  <th scope="col" colSpan="2" className="text-center">Simulação de Economia - 1,54%</th>
                 </tr>
               </thead>
               <tbody>

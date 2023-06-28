@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Simulador from "../simulador/simulador";
+import Simulador from "../inbursa/inbursa";
 import InputMask from "react-input-mask";
 
 function Formulario() {
@@ -59,7 +59,7 @@ function Formulario() {
                 />
               </div>
               <div className="col-sm-9 text-center">
-                <h1>Simulador de Proposta - INBURSA</h1>
+                <h1>Simulador de Proposta</h1>
               </div>
             </div>
           </div>
